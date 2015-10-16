@@ -24,7 +24,7 @@ body{
 		border: 1px solid #ADADAD;
 		border-left: 4px solid black;
 		width: 100%;
-		outline-color: pink;
+		outline-color: black;
 	}
 	div{
 		color: red;
@@ -39,7 +39,7 @@ body{
 		height: 5em;
 		width: 11em;
 		border: none;
-		outline-color: pink;
+		outline-color: black;
 		color: white;
 		background-color: #1D1D2D;
 	}
@@ -49,10 +49,12 @@ body{
 }
 .successBox{
 	@extend .formBox;
+	background-color: pink;
 	display: none;
+	color:green;
 }
 @media screen and(min-width: 40em){
-	.bigBox {
-		background-color: pink;
+	.formBox {
+		background-color: #FFF;
 	}
 }
