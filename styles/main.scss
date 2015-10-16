@@ -1,0 +1,58 @@
+$primaryColor: #1D2226;
+
+body{
+	background-color: $primaryColor;
+	text-align: center;
+}
+
+.formBox{
+	margin: 3em;
+	background-color: #FFF;
+	text-align: left;
+	padding:1.5625em;
+	box-sizing: border-box;
+	h2{
+		font-weight: 400;
+	}
+	h4{
+		font-weight:200;
+	}
+	input{
+		height:3em;
+		padding-left: .75em;
+		font-weight: 200;
+		border: 1px solid #ADADAD;
+		border-left: 4px solid black;
+		width: 100%;
+		outline-color: pink;
+	}
+	div{
+		color: red;
+		font-size: 1em;
+	}
+	.messInput{
+		@extend input;
+		height: 12em;
+	}
+	.submit{
+		margin-top: 1em;
+		height: 5em;
+		width: 11em;
+		border: none;
+		outline-color: pink;
+		color: white;
+		background-color: #1D1D2D;
+	}
+	.submit:hover{
+		transition: background-color .5s;
+	}
+}
+.successBox{
+	@extend .formBox;
+	display: none;
+}
+@media screen and(min-width: 40em){
+	.bigBox {
+		background-color: pink;
+	}
+}
