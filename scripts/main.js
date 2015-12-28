@@ -27,9 +27,7 @@ var $successBox = $('.successBox');
 	);
 	$button.click(function(e){
 		e.preventDefault();
-		console.log('button pressed');
 		if($nameInput.val()===('')){
-			console.log('check');
 			$nameError.html('Name cannot be left empty');
 		}else if($emailInput.val()===('' || !"@")){
 			$emailError.html('Email must contain an \'@\'.');
@@ -40,10 +38,11 @@ var $successBox = $('.successBox');
 		}else if($messInput.val()===('')){
 			$messError.html('Messages cannot be left empty');
 		}else{
-			console.log('check');
+			
 			$formBox.css({display:'none'});
 			$successBox.css({display:'block'});
-			$successBox.html('Thank you for contacting us '+$nameInput.val()+'. We have received your message and will touch you shortly.');
+			$successBox.css({color:'white'});
+			$successBox.append('Thank you for contacting us '+$nameInput.val()+'. We have received your message and will touch you shortly.');
 
 		}
 	});
