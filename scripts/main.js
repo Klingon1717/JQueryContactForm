@@ -16,9 +16,9 @@ var $button = $('.submit');
 				{backgroundColor: '#1D1D2D'});
 		}
 	);
-		$form.submit(function(e){
+		$button.click(function(e){
 		e.preventDefault();
-		var $formBox= $('.container');
+		var $big= $('.big');
 		var $nameInput =$('.nameInput');
 		var $nameError =$('.nameError');
 		var $emailInput =$('.emailInput');
@@ -43,11 +43,9 @@ var $button = $('.submit');
 			$messError.html('Messages cannot be left empty');
 		}
 		else{
-			return true;
-			$formBox.hide();
-			$success.show();
+			$big.css({display:'none'});
 			$success.css({display:'block'});
-			$("#win").html("Thank you for contacting us "+"$nameInput.val()"+". We have received your message and will be in  touch with you shortly.");
+			$success.html("Thank you for contacting us "+$nameInput.val()+". We have received your message and will be in  touch with you shortly.");
 			
 			
 
