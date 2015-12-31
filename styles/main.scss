@@ -5,7 +5,7 @@ body{
 	text-align: center;
 }
 
-.formBox{
+.container{
 	margin: 3em;
 	background-color: #FFF;
 	text-align: left;
@@ -30,7 +30,7 @@ body{
 		color: red;
 		font-size: 1em;
 	}
-	.messInput{
+	.mess{
 		@extend input;
 		height: 12em;
 	}
@@ -47,14 +47,16 @@ body{
 		transition: background-color .5s;
 	}
 }
-.successBox{
-	@extend .formBox;
-	background-color: pink;
-	display: none;
-	color:green;
+.success{
+	background-color:white;
+	height:50%;
+	#win{
+		color:red;
+		font-size: 20em;
+	}
 }
 @media screen and(min-width: 40em){
-	.formBox {
+	.container {
 		background-color: #FFF;
 	}
 }
